@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+.vscode
+.sublime
+.eclipse
+
+src
+node_modules
+.npmignore
+.eslintrc
+.gitignore
