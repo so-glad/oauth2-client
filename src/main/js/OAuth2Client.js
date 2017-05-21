@@ -12,10 +12,8 @@ import https from 'https';
 import queryString from 'querystring';
 
 const promisefy = (instance, method) => {
-    let methodImpl = method;
-    if (_.isString(method)) {
-        methodImpl = instance[method];
-    }
+    const methodImpl = (typeof method === 'string') ?
+        instance[method] : method;
 
     return function () { // For find arguments, arrow function is not OK.
         const args = Array.prototype.slice.call(arguments);
